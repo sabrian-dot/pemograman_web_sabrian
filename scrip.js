@@ -107,7 +107,89 @@ function hitung(e) {
                 "<p><b>Hasil: " + hasil + "</b></p>";
         }
 
+        let mode = "dolar"; // dolar -> rupiah
 
-// let a = 12;
-// let b = 13;
-// const c = 14;
+function konversi() {
+    let nilai = parseFloat(document.getElementById("nilai").value);
+    let hasil = 0;
+
+    if (mode === "dolar") {
+        hasil = nilai * 15000;
+        document.getElementById("hasil").innerHTML =
+            "Rupiah " + hasil;
+    } else {
+        hasil = nilai / 15000;
+        document.getElementById("hasil").innerHTML =
+            "Dollar " + hasil;
+    }
+}
+
+function tukar() {
+    let label = document.getElementById("label");
+    let hasil = document.getElementById("hasil");
+
+    if (mode === "dolar") {
+        mode = "rupiah";
+        label.innerHTML = "Rupiah";
+        hasil.innerHTML = "Dollar 1";
+        document.getElementById("nilai").value = 15000;
+    } else {
+        mode = "dolar";
+        label.innerHTML = "Dollar";
+        hasil.innerHTML = "Rupiah 15000";
+        document.getElementById("nilai").value = 1;
+    }
+}
+let timer = null;
+
+function konversi2() {
+    clearTimeout(timer);
+
+    timer = setTimeout(() => {
+        let c = document.getElementById("celcius").value;
+
+        if (c === "") {
+            document.getElementById("hasil").innerHTML = "Fahrenheit";
+            return;
+        }
+
+        let f = (c * 9 / 5) + 32;
+
+        document.getElementById("hasil").innerHTML =
+            "Fahrenheit " + f;
+    }, 500); 
+}
+
+function cekKelulusan() {
+    let batas = parseInt(document.getElementById("batas").value);
+    let nilai = parseInt(document.getElementById("nilai").value);
+    let hasil = document.getElementById("hasil");
+
+    if (isNaN(nilai) || isNaN(batas)) {
+        hasil.innerHTML = "Masukkan nilai dengan benar";
+        return;
+    }
+
+    if (nilai >= batas) {
+        hasil.innerHTML = "Lulus";
+    } else {
+        hasil.innerHTML = "Tidak Lulus";
+    }
+}
+
+const btnUtama = document.getElementById('btnUtama');
+const containerMenu = document.getElementById('containerMenu');
+
+
+btnUtama.onclick = function() {
+   
+    if (containerMenu.style.display === 'none') {
+        containerMenu.style.display = 'block';
+    } else {
+        containerMenu.style.display = 'none';
+    }
+};
+
+
+
+
