@@ -107,18 +107,18 @@ function hitung(e) {
                 "<p><b>Hasil: " + hasil + "</b></p>";
         }
 
-        let mode = "dolar"; // dolar -> rupiah
+        let mode = "dolar"; 
 
 function konversi() {
     let nilai = parseFloat(document.getElementById("nilai").value);
     let hasil = 0;
 
     if (mode === "dolar") {
-        hasil = nilai * 15000;
+        hasil = nilai * 16000;
         document.getElementById("hasil").innerHTML =
             "Rupiah " + hasil;
     } else {
-        hasil = nilai / 15000;
+        hasil = nilai / 16000;
         document.getElementById("hasil").innerHTML =
             "Dollar " + hasil;
     }
@@ -132,7 +132,7 @@ function tukar() {
         mode = "rupiah";
         label.innerHTML = "Rupiah";
         hasil.innerHTML = "Dollar 1";
-        document.getElementById("nilai").value = 15000;
+        document.getElementById("nilai").value = 16000;
     } else {
         mode = "dolar";
         label.innerHTML = "Dollar";
