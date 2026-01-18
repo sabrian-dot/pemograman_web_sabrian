@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="profile-card education-compact">
+        <h2 class="page-title-compact">Dokumen</h2>
+        
+        <div class="download-container">
+            <a href="{{ url_for('static', filename='cv/CV_Sabrian.pdf') }}" 
+               class="btn-download pdf" 
+               download="CV_Sabrian.pdf">
+               Download CV (PDF)
+            </a>
+
+            <a href="{{ url_for('static', filename='cv/CV_Sabrian.docx') }}" 
+               class="btn-download docx" 
+               download="CV_Sabrian.docx">
+               Download CV (DOCX)
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

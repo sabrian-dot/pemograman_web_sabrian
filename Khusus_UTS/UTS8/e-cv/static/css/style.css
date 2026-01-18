@@ -1,0 +1,372 @@
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --text-light: #ecf0f1;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+}
+
+
+
+/* Style untuk Navigasi (menu.html) */
+nav {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top:2%;
+    margin-right: 13%;
+    margin-left: 13%;
+    margin-bottom: -2%;
+    border-radius: 10px;
+
+
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+h1 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+:root {
+    --primary: #ecf2f4;
+    --accent: #0984e3;
+    --bg-color: #f5f6fa;
+    --white: #343030;
+}
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+/* Kartu Profil Utama */
+.profile-card {
+    background: var(--white);
+    max-width: 800px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    
+}
+
+/* Desain Lingkaran Foto */
+.image-container {
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Tipografi */
+.profile-info h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin: 0;
+}
+
+.job-title {
+    color: #edf0f1;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.divider {
+    width: 50px;
+    border: 2px solid var(--accent);
+    margin: 20px 0;
+}
+
+.bio {
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+/* Responsive untuk HP */
+@media (max-width: 600px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .divider {
+        margin: 20px auto;
+    }
+}
+
+/* Desain Tombol Primary yang Kreatif */
+.btn-primary {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #2fa2dc; /* Menggunakan variabel warna biru terang */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px; /* Membuat bentuk kapsul yang modern */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease; /* Transisi halus untuk semua efek */
+    box-shadow: 0 4px 15px rgba(9, 132, 227, 0.3); /* Shadow berwarna biru lembut */
+    border: none;
+    cursor: pointer;
+}
+
+/* Efek saat Kursor Diarahkan (Hover) */
+.btn-primary:hover {
+    background-color: #214d6e; /* Warna sedikit lebih gelap saat hover */
+    transform: translateY(-2px); /* Tombol sedikit terangkat ke atas */
+    box-shadow: 0 6px 20px rgba(9, 132, 227, 0.4); /* Shadow lebih tegas saat hover */
+}
+
+/* Efek saat Tombol Diklik (Active) */
+.btn-primary:active {
+    transform: translateY(-1px); /* Tombol kembali turun sedikit saat ditekan */
+}
+
+/* Container kartu versi rapat dan gelap */
+.education-compact {
+    background-color: #333131; /* Warna gelap sesuai gambar Anda */
+    color: #ffffff;
+    padding: 25px 15px; /* Padding lebih kecil agar rapat */
+    padding-right: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 15px;
+}
+
+.page-title-compact {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0 0 15px 0; /* Margin bawah diperkecil */
+    font-weight: bold;
+}
+
+/* List versi rapat */
+.edu-list-compact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.edu-list-compact li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Jarak antar baris sangat rapat */
+    font-size: 0.95rem;
+    color: #b0b0b0; /* Warna teks tahun agak redup agar kontras dengan nama sekolah */
+}
+
+.edu-list-compact li strong {
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+.edu-list-compact li small {
+    color: #888;
+    margin-left: 8px;
+}
+
+/* Titik biru kecil */
+.dot {
+    height: 6px;
+    width: 6px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+/* Container kartu versi rapat dan gelap (Gunakan class yang sama agar konsisten) */
+.experience-compact {
+    background-color: #333131; 
+    color: #ffffff;
+    padding: 25px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 15px;
+}
+
+/* List versi rapat untuk pengalaman */
+.exp-list-compact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.exp-list-compact li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Jarak antar baris tetap rapat */
+    font-size: 0.95rem;
+    color: #b0b0b0; /* Warna tahun */
+}
+
+.exp-list-compact li strong {
+    color: #ffffff; /* Warna posisi/jabatan */
+    margin-left: 8px;
+}
+
+.exp-list-compact li small {
+    color: #3498db; /* Warna biru untuk nama perusahaan agar ada variasi */
+    margin-left: 8px;
+    font-weight: 500;
+}
+
+/* Container untuk membungkus dua kartu */
+.skill-container {
+    display: flex;
+    gap: 20px; /* Jarak antar kartu */
+    width: 100%;
+    max-width: 900px; /* Sesuaikan lebar total */
+    justify-content: center;
+}
+
+/* Memodifikasi profile-card agar ukurannya pas saat dibagi dua */
+.half-card {
+    flex: 1; /* Membuat kedua kartu memiliki lebar yang sama */
+    background-color: #333131; 
+    color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    min-height: 200px;
+}
+
+/* Memastikan tampilan tetap bagus di Handphone */
+@media (max-width: 768px) {
+    .skill-container {
+        flex-direction: column; /* Bertumpuk ke bawah jika layar kecil */
+        align-items: center;
+    }
+    .half-card {
+        width: 100%;
+    }
+}
+
+/* Container kartu kontak gelap */
+.contact-compact {
+    background-color: #333131; 
+    color: #ffffff;
+    padding: 30px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 15px;
+    max-width: 500px; /* Lebih ramping agar terlihat padat */
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px; /* Jarak rapat */
+    font-size: 1rem;
+}
+
+.contact-list li strong {
+    margin-right: 10px;
+    color: #ffffff;
+    min-width: 80px; /* Agar teks setelah titik dua sejajar */
+}
+
+.contact-list a {
+    color: #3498db; /* Warna biru aksen untuk link */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+    color: #5dade2;
+}
+
+.contact-label {
+    display: inline-block;
+    width: 100px; /* Atur lebar ini sesuai kebutuhan agar titik dua sejajar */
+    color: #ffffff; /* Warna putih agar kontras dengan background gelap */
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px; /* Menjaga tampilan tetap rapat */
+    color: #ffffff;
+}
+
+.dot {
+    height: 6px;
+    width: 6px;
+    background-color: #3498db; /* Warna biru aksen sesuai desain Anda */
+    border-radius: 50%;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+/* Container untuk tombol agar sejajar */
+.download-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Gaya dasar tombol download */
+.btn-download {
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+/* Warna hijau untuk PDF */
+.btn-download.pdf {
+    background-color: #e42727;
+}
+
+/* Warna biru untuk DOCX */
+.btn-download.docx {
+    background-color: #0667cf;
+}
+
+.btn-download:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}

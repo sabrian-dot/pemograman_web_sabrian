@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="profile-card">
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='img/profil_sabrian.jpg') }}" alt="Sabrian Foto" class="profile-img">
+        </div>
+        
+        <div class="profile-info">
+            <h1>Laode Muh. Sabrian Saputra</h1>
+            <p class="job-title">Mahasiswa Informatika | Python</p>
+            <hr class="divider">
+            <p class="bio">
+                <strong>Ringkasan:</strong> Saya adalah seorang Mahasiswa yang berfokus pada pembelajaran program website menggunakan python dan html.
+            </p>
+            <div class="cta-buttons">
+                <a href="/kontak" class="btn-primary">Hubungi Saya</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
